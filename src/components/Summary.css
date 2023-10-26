@@ -1,0 +1,10 @@
+.summary {
+    padding: 24px;
+    background-color: #484848;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-name {
+    margin-top: 24px;
+}
