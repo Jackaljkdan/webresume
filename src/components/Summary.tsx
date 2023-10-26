@@ -1,4 +1,4 @@
-import "./Summary.css";
+import "./Summary.scss";
 import { MyPicture } from "./MyPicture";
 
 type Props = {

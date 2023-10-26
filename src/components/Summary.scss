@@ -1,10 +1,13 @@
+@use '../variables' as v;
+
 .summary {
     padding: 24px;
-    background-color: #484848;
+    background-color: v.$background-contrast;
     display: flex;
     flex-direction: column;
 }
 
 .my-name {
     margin-top: 24px;
+    color: v.$accent;
 }
