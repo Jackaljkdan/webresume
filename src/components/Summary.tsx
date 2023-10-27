@@ -18,7 +18,7 @@ export function Summary(props: Props) {
             <div>
                 <MyPicture />
 
-                <h3 className="my-name">
+                <h3 className="my-name title">
                     Daniele Cortesi
                 </h3>
 

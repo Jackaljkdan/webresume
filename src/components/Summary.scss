@@ -1,22 +1,17 @@
 @use '../variables' as v;
 
 .summary {
-    padding: 24px;
+    padding: 18px;
     background-color: v.$background-contrast;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    min-height: 100%;
     box-sizing: border-box;
-
-    hr {
-        width: 90%;
-    }
 }
 
 .my-name {
     margin-top: 24px;
-    color: v.$accent;
 }
 
 .skills {
