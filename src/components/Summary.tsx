@@ -6,6 +6,7 @@ import { ProgressBar } from "./ProgressBar";
 import { MaterialLinkButton } from "./MaterialLinkButton";
 import { IconLinkButton } from "./IconLinkButton";
 import linkedin from "../assets/linkedin.png";
+import { PromptIcon } from "./PromptIcon";
 
 type Props = {
     className?: string,
@@ -14,17 +15,23 @@ type Props = {
 export function Summary(props: Props) {
     return (
         <div className={classNames(props.className, "summary")}>
-            <MyPicture />
-
-            <h3 className="my-name">
-                Daniele Cortesi
-            </h3>
-
             <div>
-                I'm a software developer by heart and trade.
-                I love solving the riddles of programming and while doing so
-                implementing great user experiences envisioned by great designers.
+                <MyPicture />
+
+                <h3 className="my-name">
+                    Daniele Cortesi
+                </h3>
+
+                <div>
+                    <PromptIcon />
+                    I'm a software developer by heart and trade.
+                    I love solving the riddles of programming and while doing so
+                    implementing great user experiences envisioned by great designers.
+                </div>
             </div>
+
+
+            <hr />
 
             <div className="skills">
                 <ProgressBar percentage={94}>
@@ -51,6 +58,8 @@ export function Summary(props: Props) {
                     Git
                 </ProgressBar>
             </div>
+
+            <hr />
 
             <div className="links">
                 <MaterialLinkButton

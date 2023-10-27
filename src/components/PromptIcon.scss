@@ -1,0 +1,11 @@
+.prompt-icon {
+    margin-right: 12px;
+
+    span {
+        transform: translateY(4px);
+
+        &:first-child {
+            margin: 0 -8px;
+        }
+    }
+}
