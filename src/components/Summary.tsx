@@ -66,6 +66,10 @@ export function Summary(props: Props) {
                     href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                     symbol="help"
                 />
+                <MaterialLinkButton
+                    href="mailto:danicortesi.dev@gmail.com"
+                    symbol="mail"
+                />
                 <IconLinkButton
                     src={linkedin}
                     alt="LinkedIn"
