@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 import "./Summary.scss";
 import { MyPicture } from "./MyPicture";
 import { ProgressBar } from "./ProgressBar";
@@ -8,7 +10,7 @@ type Props = {
 
 export function Summary(props: Props) {
     return (
-        <div className={`${props.className} summary`}>
+        <div className={classNames(props.className, "summary")}>
             <MyPicture />
 
             <h3 className="my-name">
