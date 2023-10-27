@@ -1,0 +1,7 @@
+@use 'variables' as v;
+
+:export {
+    accent: v.$accent;
+    background: v.$background;
+    backgroundContrast: v.$background-contrast;
+}

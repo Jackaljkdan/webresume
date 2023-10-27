@@ -11,3 +11,11 @@
     margin-top: 24px;
     color: v.$accent;
 }
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
