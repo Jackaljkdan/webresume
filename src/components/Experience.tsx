@@ -1,16 +1,18 @@
 import classNames from "classnames";
 
 import "./Experience.scss";
+import { useStrings } from "../localization/useStrings";
 
 type Props = {
     className?: string,
 };
 
 export function Experience(props: Props) {
+    const strings = useStrings();
     return (
         <div className={classNames(props.className, "experience")}>
             <h1 className="title">
-                Experience
+                {strings.exp}
             </h1>
 
             <hr />
@@ -19,21 +21,21 @@ export function Experience(props: Props) {
                 Creepy Bug
             </h2>
             <div>
-                Living the indie game development dream.
+                {strings.creepybug_dream}
             </div>
 
             <h2>
                 Melazeta
             </h2>
             <div>
-                React Native and all that jazz
+                {strings.melaz_react}
             </div>
 
             <h2>
-                University of Bologna
+                {strings.uni_title}
             </h2>
             <div>
-                3+2 years degree in computer science
+                {strings.uni_degree}
             </div>
         </div>
     );

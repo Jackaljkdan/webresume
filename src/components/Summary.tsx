@@ -7,12 +7,14 @@ import { MaterialLinkButton } from "./MaterialLinkButton";
 import { IconLinkButton } from "./IconLinkButton";
 import linkedin from "../assets/linkedin.png";
 import { PromptIcon } from "./PromptIcon";
+import { useStrings } from "../localization/useStrings";
 
 type Props = {
     className?: string,
 };
 
 export function Summary(props: Props) {
+    const strings = useStrings();
     return (
         <div className={classNames(props.className, "summary")}>
             <div>
@@ -24,9 +26,7 @@ export function Summary(props: Props) {
 
                 <div>
                     <PromptIcon />
-                    I'm a software developer by heart and trade.
-                    I love solving the riddles of programming and while doing so
-                    implementing great user experiences envisioned by great designers.
+                    {strings.summary}
                 </div>
             </div>
 
