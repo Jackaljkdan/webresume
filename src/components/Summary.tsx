@@ -3,6 +3,9 @@ import classNames from "classnames";
 import "./Summary.scss";
 import { MyPicture } from "./MyPicture";
 import { ProgressBar } from "./ProgressBar";
+import { MaterialLinkButton } from "./MaterialLinkButton";
+import { IconLinkButton } from "./IconLinkButton";
+import linkedin from "../assets/linkedin.png";
 
 type Props = {
     className?: string,
@@ -43,6 +46,27 @@ export function Summary(props: Props) {
                 <ProgressBar percentage={90}>
                     C#
                 </ProgressBar>
+
+                <ProgressBar percentage={100}>
+                    Git
+                </ProgressBar>
+            </div>
+
+            <div className="links">
+                <MaterialLinkButton
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    symbol="help"
+                />
+                <IconLinkButton
+                    src={linkedin}
+                    alt="LinkedIn"
+                    href="https://www.linkedin.com/in/daniele-cortesi-5b396360/"
+                />
+                <MaterialLinkButton
+                    href="."
+                    symbol="download"
+                    text="CV"
+                />
             </div>
 
         </div>

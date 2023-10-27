@@ -5,6 +5,8 @@
     background-color: v.$background-contrast;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .my-name {
@@ -15,7 +17,18 @@
 .skills {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 20px 0;
+}
+
+.links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+
+    > * {
+        margin-left: 24px;
+    }
 }
