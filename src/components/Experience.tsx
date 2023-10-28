@@ -63,15 +63,15 @@ export function Experience(props: Props) {
                     <Li>
                         {strings.melaz_react}
                         <ul>
-                            <Li>
-                                Redux, Jotai, Luxon, React Navigation, ...
+                            <Li nested={true}>
+                                Redux, Jotai, Luxon, React Navigation, React router
                             </Li>
                         </ul>
                     </Li>
                     <Li>
                         {strings.melaz_api}
                         <ul>
-                            <Li>
+                            <Li nested={true}>
                                 React Query
                             </Li>
                         </ul>

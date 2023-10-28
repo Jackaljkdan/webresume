@@ -15,11 +15,11 @@
 a.material-link {
     color: #fff;
 
-    &:hover {
-        color: #999;
-    }
-    
     &:visited {
         color: #fff;
+    }
+
+    &:hover {
+        color: #999;
     }
 }

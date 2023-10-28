@@ -63,12 +63,9 @@ export function Summary(props: Props) {
 
             <div className="links">
                 <MaterialLinkButton
-                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                    symbol="help"
-                />
-                <MaterialLinkButton
-                    href="mailto:danicortesi.dev@gmail.com"
-                    symbol="mail"
+                    href="."
+                    symbol="download"
+                    text="CV"
                 />
                 <IconLinkButton
                     src={linkedin}
@@ -76,9 +73,12 @@ export function Summary(props: Props) {
                     href="https://www.linkedin.com/in/daniele-cortesi-5b396360/"
                 />
                 <MaterialLinkButton
-                    href="."
-                    symbol="download"
-                    text="CV"
+                    href="mailto:danicortesi.dev@gmail.com"
+                    symbol="mail"
+                />
+                <MaterialLinkButton
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    symbol="help"
                 />
             </div>
 
