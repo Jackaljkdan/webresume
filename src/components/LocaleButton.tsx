@@ -32,10 +32,13 @@ export function LocaleButton(props: Props) {
                 ? <>
                     <hr />
                     {locales.map(el => (
-                        <button onClick={() => {
-                            setLocale(el);
-                            setIsOpen(false);
-                        }}>
+                        <button
+                            key={el}
+                            onClick={() => {
+                                setLocale(el);
+                                setIsOpen(false);
+                            }}
+                        >
                             {el}
                         </button>
                     ))}
