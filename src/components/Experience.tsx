@@ -83,7 +83,7 @@ export function Experience(props: Props) {
                 Just Funny Games
             </h2>
             <div>
-                {strings.jfg}
+                {strings.jfg}.
             </div>
 
             <hr />
@@ -93,6 +93,23 @@ export function Experience(props: Props) {
             </h2>
             <div>
                 {strings.uni_degree}
+                <ul>
+                    <Li>
+                        {strings.uni_thesis} <a href="https://amslaurea.unibo.it/16138/1/tesi%20Cortesi%20Daniele.pdf">Reinforcement Learning in Rogue</a>
+                    </Li>
+                    <Li>
+                        Asperti, A., Cortesi, D., De Pieri, C., Pedrini, G., & Sovrano, F. (2019).
+                        {" "}<a href="https://ieeexplore.ieee.org/abstract/document/8641337">Crawling in rogue's dungeons with deep reinforcement techniques.</a>
+                        {" "}<i>IEEE Transactions on Games, 12</i>
+                        (2), 177-186.
+                    </Li>
+                    <Li>
+                        Asperti, A., Cortesi, D., & Sovrano, F. (2019).
+                        {" "}<a href="https://arxiv.org/abs/1804.08685">Crawling in rogue’s dungeons with (partitioned) a3c.</a>
+                        {" "}<i>In Machine Learning, Optimization, and Data Science: 4th International Conference, LOD 2018, Volterra, Italy, September 13-16, 2018, Revised Selected Papers 4 (pp. 264-275).</i>
+                        {" "}Springer International Publishing.
+                    </Li>
+                </ul>
             </div>
         </div>
     );
