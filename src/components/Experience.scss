@@ -7,6 +7,10 @@
         padding-left: 2rem;
     }
 
+    @include m.narrow {
+        margin-top: 1em;
+    }
+
     hr {
         @include m.wide {
             margin-left: 0;
