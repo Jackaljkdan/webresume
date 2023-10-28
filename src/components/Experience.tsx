@@ -51,7 +51,28 @@ export function Experience(props: Props) {
                 Melazeta
             </h2>
             <div>
-                {strings.melaz_react}
+                {strings.melaz_overview}
+                <ul>
+                    <Li>
+                        {strings.melaz_react}
+                        <ul>
+                            <Li>
+                                Redux, Jotai, Luxon, React Navigation, ...
+                            </Li>
+                        </ul>
+                    </Li>
+                    <Li>
+                        {strings.melaz_api}
+                        <ul>
+                            <Li>
+                                React Query
+                            </Li>
+                        </ul>
+                    </Li>
+                    <Li>
+                        {strings.melaz_unity}
+                    </Li>
+                </ul>
             </div>
 
             <h2>
