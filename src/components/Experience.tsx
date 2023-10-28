@@ -3,6 +3,7 @@ import classNames from "classnames";
 import "./Experience.scss";
 import { useStrings } from "../localization/useStrings";
 import { Li } from "./Li";
+import { ExperienceTitle } from "./ExperienceTitle";
 
 type Props = {
     className?: string,
@@ -18,9 +19,11 @@ export function Experience(props: Props) {
 
             <hr />
 
-            <h2>
-                Creepy Bug
-            </h2>
+            <ExperienceTitle
+                title="Creepy Bug"
+                from={strings.exp_endof + " 2022"}
+                duration={"1 " + strings.exp_year}
+            />
             <div>
                 {strings.creepybug_dream}
                 <ul>
@@ -49,9 +52,11 @@ export function Experience(props: Props) {
 
             <hr />
 
-            <h2>
-                Melazeta
-            </h2>
+            <ExperienceTitle
+                title="Melazeta"
+                from={strings.exp_mid + " 2019"}
+                duration={"3½ " + strings.exp_years}
+            />
             <div>
                 {strings.melaz_overview}
                 <ul>
@@ -79,18 +84,23 @@ export function Experience(props: Props) {
 
             <hr />
 
-            <h2>
-                Just Funny Games
-            </h2>
+            <ExperienceTitle
+                title="Just Funny Games"
+                from={strings.exp_endof + " 2018"}
+                duration={"6 " + strings.exp_months}
+            />
             <div>
                 {strings.jfg}.
             </div>
 
             <hr />
 
-            <h2>
-                {strings.uni_title}
-            </h2>
+
+            <ExperienceTitle
+                title={strings.uni_title}
+                from={strings.exp_endof + " 2013"}
+                duration={"5 " + strings.exp_years}
+            />
             <div>
                 {strings.uni_degree}
                 <ul>

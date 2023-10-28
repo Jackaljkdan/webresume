@@ -1,0 +1,23 @@
+@use '../variables' as v;
+
+.experience-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+    .time {
+        display: flex;
+        flex-direction: column;
+        color: v.$accent;
+        font-size: 0.8em;
+        font-style: italic;
+        padding-left: 12px;
+        align-items: flex-end;
+
+        .from {
+            font-size: 0.75em;
+        }
+    }
+}
