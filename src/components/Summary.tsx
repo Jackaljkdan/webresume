@@ -20,9 +20,9 @@ export function Summary(props: Props) {
             <div>
                 <MyPicture />
 
-                <h3 className="my-name title">
+                <h2 className="my-name title">
                     Daniele Cortesi
-                </h3>
+                </h2>
 
                 <div>
                     <PromptIcon />
