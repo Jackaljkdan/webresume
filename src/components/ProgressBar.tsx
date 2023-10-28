@@ -6,7 +6,7 @@ import v from "../_variables.module.scss";
 type Props = {
     percentage: number,
     className?: string,
-    children: React.ReactNode;
+    children: React.ReactNode,
 };
 
 export function ProgressBar(props: Props) {
