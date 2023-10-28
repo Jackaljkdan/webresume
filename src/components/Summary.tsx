@@ -18,13 +18,15 @@ export function Summary(props: Props) {
     return (
         <div className={classNames(props.className, "summary")}>
             <div>
-                <MyPicture />
+                <div className="pic-and-name">
+                    <MyPicture />
 
-                <h2 className="my-name title">
-                    Daniele Cortesi
-                </h2>
+                    <h2 className="my-name title">
+                        Daniele Cortesi
+                    </h2>
+                </div>
 
-                <div>
+                <div className="about">
                     <PromptIcon />
                     {strings.summary}
                 </div>

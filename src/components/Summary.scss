@@ -4,15 +4,44 @@
     padding: 18px;
     background-color: v.$background-contrast;
     flex: 1;
-    max-width: 390px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    
+    @media (max-width: v.$layout-breakpoint) {
+        margin: -2rem -2rem 0;
+        padding: 2.5rem 2rem 1rem;
+    }
+
+    @media (min-width: v.$layout-breakpoint) {
+        max-width: 390px;
+    }
+}
+
+.pic-and-name {
+    margin-bottom: 1rem;
+
+    @media (max-width: v.$layout-breakpoint) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }
 
 .my-name {
-    margin-top: 24px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    
+    @media (max-width: v.$layout-breakpoint) {
+        margin-left: 24px;
+        text-align: right;
+    }
+
+    @media (min-width: v.$layout-breakpoint) {
+        margin-top: 1rem;
+    }
 }
 
 .skills {

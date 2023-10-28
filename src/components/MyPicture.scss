@@ -1,10 +1,15 @@
 @use '../variables' as v;
 
 .my-pic {
-    position: relative;
+    max-width: 100%;
+    
+    @media (max-width: v.$layout-breakpoint) {
+        max-width: 50%;
+    }
     
     img {
-        max-width: 100%;
+        width: 100%;
         border: 2px solid white;
+        box-sizing: border-box;
     }
 }
