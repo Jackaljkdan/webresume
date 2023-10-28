@@ -98,8 +98,8 @@ export function Experience(props: Props) {
 
             <ExperienceTitle
                 title={strings.uni_title}
-                from={strings.exp_endof + " 2013"}
-                duration={"5 " + strings.exp_years}
+                from={strings.exp_endof + " 2012"}
+                duration={"5½ " + strings.exp_years}
             />
             <div className="uni">
                 {strings.uni_degree}
