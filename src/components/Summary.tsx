@@ -30,7 +30,6 @@ export function Summary(props: Props) {
                 </div>
             </div>
 
-
             <hr />
 
             <div className="skills">

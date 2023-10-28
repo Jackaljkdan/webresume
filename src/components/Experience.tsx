@@ -101,7 +101,7 @@ export function Experience(props: Props) {
                 from={strings.exp_endof + " 2013"}
                 duration={"5 " + strings.exp_years}
             />
-            <div>
+            <div className="uni">
                 {strings.uni_degree}
                 <ul>
                     <Li>
