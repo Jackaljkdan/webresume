@@ -29,7 +29,7 @@ export default {
         exp_months: "mesi",
         creepybug_dream: "Il sogno dello sviluppatore di videogiochi indie Unity nella mia ditta individuale:",
         melaz_overview: "Edu games ed esperienze interattive gamificate:",
-        melaz_react: "App React Native & web app React",
+        melaz_react: "App React Native e Web App React",
         melaz_api: "Integrazione API",
         melaz_unity: "Edu games in Unity ed esperienze VR",
         jfg: "Tirocinio Unity",

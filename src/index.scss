@@ -1,8 +1,10 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 :root {
     font-family: monospace;
     font-size: 1rem;
+    line-height: 1.5rem;
 
     color-scheme: light dark;
     color: #ffffff;
@@ -43,7 +45,14 @@ button {
 
 ul {
     list-style: none;
-    // padding-inline-start: 12px;
+
+    @include m.narrow {
+        margin-left: -2em;
+
+        ul {
+            margin-left: 0;
+        }
+    }
 }
 
 // @media (prefers-color-scheme: light) {

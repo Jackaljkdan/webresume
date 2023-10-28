@@ -1,9 +1,19 @@
+@use '../mixins' as m;
+
 .experience {
-    padding: 0 2rem;
     flex: 2;
 
+    @include m.wide {
+        padding-left: 2rem;
+    }
+
     hr {
-        margin-left: 0;
+        @include m.wide {
+            margin-left: 0;
+        }
+        @include m.narrow {
+            width: 100%;
+        }
     }
 
     .uni li {
