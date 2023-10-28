@@ -1,0 +1,13 @@
+@use './variables' as v;
+
+@mixin wide {
+    @media (min-width: v.$layout-breakpoint) {
+        @content;
+    }
+}
+
+@mixin narrow {
+    @media (max-width: v.$layout-breakpoint) {
+        @content;
+    }
+}

@@ -1,9 +1,10 @@
 @use '../variables' as v;
+@use '../mixins' as m;
 
 .my-pic {
     max-width: 100%;
     
-    @media (max-width: v.$layout-breakpoint) {
+    @include m.narrow {
         max-width: 50%;
     }
     
