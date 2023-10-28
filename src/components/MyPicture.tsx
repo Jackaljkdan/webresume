@@ -1,6 +1,7 @@
 import classNames from "classnames";
 
-import picture from "../assets/react.svg";
+import "./MyPicture.scss";
+import picture from "../assets/me.jpg";
 
 type Props = {
     className?: string,
@@ -8,7 +9,7 @@ type Props = {
 
 export function MyPicture(props: Props) {
     return (
-        <div className={classNames(props.className)}>
+        <div className={classNames(props.className, "my-pic")}>
             <img src={picture} alt="My picture" />
         </div>
     );
