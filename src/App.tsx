@@ -1,5 +1,6 @@
 import "./App.scss";
 import { Experience } from "./components/Experience";
+import { LocaleButton } from "./components/LocaleButton";
 import { Summary } from "./components/Summary";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
         <>
             <Summary />
             <Experience />
+            <LocaleButton className="locale" />
         </>
     );
 }
