@@ -47,6 +47,8 @@ export function Experience(props: Props) {
                 </ul>
             </div>
 
+            <hr />
+
             <h2>
                 Melazeta
             </h2>
@@ -74,6 +76,17 @@ export function Experience(props: Props) {
                     </Li>
                 </ul>
             </div>
+
+            <hr />
+
+            <h2>
+                Just Funny Games
+            </h2>
+            <div>
+                {strings.jfg}
+            </div>
+
+            <hr />
 
             <h2>
                 {strings.uni_title}
