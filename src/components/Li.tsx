@@ -12,7 +12,10 @@ export function Li(props: Props) {
     const nested = props.nested ?? false;
     return (
         <li className={classNames(props.className)}>
-            <PromptIcon underscore={!nested} />
+            <PromptIcon
+                underscore={!nested}
+                rotate={nested}
+            />
             {props.children}
         </li>
     );
