@@ -55,7 +55,7 @@ export function Experience(props: Props) {
             <ExperienceTitle
                 title="Melazeta"
                 from={strings.exp_mid + " 2019"}
-                duration={"3½ " + strings.exp_years}
+                duration={"3+ " + strings.exp_years}
             />
             <div>
                 {strings.melaz_overview}
@@ -99,7 +99,7 @@ export function Experience(props: Props) {
             <ExperienceTitle
                 title={strings.uni_title}
                 from={strings.exp_endof + " 2012"}
-                duration={"5½ " + strings.exp_years}
+                duration={"5+ " + strings.exp_years}
             />
             <div className="uni">
                 {strings.uni_degree}
