@@ -26,6 +26,9 @@
         text-transform: uppercase;
         margin: 4px 0;
 
+        // fix black color on some devices
+        color: #fff;
+
         &.open {
             span {
                 transform: rotate(180deg);
@@ -33,7 +36,7 @@
         }
 
         &:hover {
-            color: #999
+            color: #999;
         }
 
         span {
