@@ -64,7 +64,7 @@ export function Summary(props: Props) {
 
             <div className="links">
                 <MaterialLinkButton
-                    href="."
+                    href="cv.pdf"
                     symbol="download"
                     text="CV"
                 />
