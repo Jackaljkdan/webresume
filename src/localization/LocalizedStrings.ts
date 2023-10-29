@@ -17,6 +17,7 @@ export default {
         uni_title: "University of Bologna",
         uni_degree: "Master degree with honors in Computer Science:",
         uni_thesis: "Thesis:",
+        updated: "Updated",
     },
     it: {
         summary: "Sono uno sviluppatore software per passione e mestiere. Amo risolvere gli enigmi della programmazione e nel farlo implementare splendide esperienze utente ideate da grandi designer.",
@@ -36,5 +37,6 @@ export default {
         uni_title: "Università di Bologna",
         uni_degree: "Laurea magistrale con lode in Informatica:",
         uni_thesis: "Tesi:",
+        updated: "Aggiornato",
     },
 };

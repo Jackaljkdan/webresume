@@ -2,7 +2,9 @@
 @use 'mixins' as m;
 
 #root {
+    position: relative;
     padding: 2rem;
+    padding-bottom: 3rem;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
@@ -23,8 +25,14 @@ hr {
     margin: 36px auto;
 }
 
-.locale {
+.app-locale {
     position: fixed;
     top: 2rem;
+    right: 2rem;
+}
+
+.app-updated-at {
+    position: absolute;
+    bottom: 1rem;
     right: 2rem;
 }
