@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { useSpring, animated, config } from "@react-spring/web";
 
 import "./ProgressBar.scss";
 import v from "../_variables.module.scss";
@@ -10,14 +11,18 @@ type Props = {
 };
 
 export function ProgressBar(props: Props) {
+    const springs = useSpring({
+        from: { background: `radial-gradient(closest-side, ${v.backgroundContrast} 84%, transparent 85% 100%), conic-gradient(${v.accent} 0%, transparent 0)` },
+        to: { background: `radial-gradient(closest-side, ${v.backgroundContrast} 84%, transparent 85% 100%), conic-gradient(${v.accent} ${props.percentage}%, transparent 0)` },
+        config: config.slow,
+    });
+
     return (
-        <div
+        <animated.div
             className={classNames(props.className, "progress-bar")}
-            style={{
-                background: `radial-gradient(closest-side, ${v.backgroundContrast} 84%, transparent 85% 100%), conic-gradient(${v.accent} ${props.percentage}%, transparent 0)`,
-            }}
+            style={springs}
         >
             {props.children}
-        </div>
+        </animated.div>
     );
 }
