@@ -5,6 +5,7 @@ import { useAtom } from "jotai";
 import "./LocaleButton.scss";
 import { localeAtom } from "../localization/LocaleAtom";
 import { locales } from "../localization/Locale";
+import { AnimatedOpen } from "../utils/AnimatedOpen";
 
 type Props = {
     className?: string,
@@ -20,7 +21,6 @@ export function LocaleButton(props: Props) {
                 className={classNames("locale-btn", {
                     open: isOpen,
                 })}
-                // onClick=}
                 onClick={() => setIsOpen(value => !value)}
             >
                 {locale}
@@ -28,24 +28,23 @@ export function LocaleButton(props: Props) {
                     expand_more
                 </span>
             </button>
-            {isOpen
-                ? <>
-                    <hr />
-                    {locales.map(el => (
-                        <button
-                            key={el}
-                            onClick={() => {
-                                setLocale(el);
-                                setIsOpen(false);
-                            }}
-                        >
-                            {el}
-                        </button>
-                    ))}
-                </>
-                : null
-            }
-        </div >
-
+            <AnimatedOpen
+                contentClassName="locales-list"
+                isOpen={isOpen}
+            >
+                <hr />
+                {locales.map(el => (
+                    <button
+                        key={el}
+                        onClick={() => {
+                            setLocale(el);
+                            setIsOpen(false);
+                        }}
+                    >
+                        {el}
+                    </button>
+                ))}
+            </AnimatedOpen>
+        </div>
     );
 }

@@ -8,42 +8,44 @@
     width: fit-content;
     padding: 0 2px;
 
-    box-sizing: border-box;
     background-color: v.$background-contrast;
-    border-radius: 8px;
     border: 1px solid #fff;
     transition: border-color 0.25s;
+    overflow: hidden;
 
     &:hover {
         border-color: v.$accent;
     }
     
     button {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         text-transform: uppercase;
         margin: 4px 0;
-
+        
         // fix black color on some devices
         color: #fff;
-
-        &.open {
-            span {
-                transform: rotate(180deg);
-            }
-        }
-
+        
         &:hover {
             color: #999;
         }
 
-        span {
-            margin-right: -4px;
-            margin-left: 4px;
-            font-size: 1.5em;
-            transition: transform 0.25s;
+        &:first-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                margin-right: -4px;
+                margin-left: 4px;
+                font-size: 1.5em;
+                transition: transform 0.25s;
+            }
+
+            &.open {
+                span {
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
 
@@ -53,5 +55,12 @@
         padding: 0 0;
         border-left: 0;
         border-right: 0;
+    }
+
+    .locales-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
