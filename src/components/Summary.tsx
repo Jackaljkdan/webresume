@@ -8,6 +8,7 @@ import { IconLinkButton } from "./IconLinkButton";
 import linkedin from "../assets/linkedin.png";
 import { PromptIcon } from "./PromptIcon";
 import { useStrings } from "../localization/useStrings";
+import { CvLinkButton } from "./CvLinkButton";
 
 type Props = {
     className?: string,
@@ -63,11 +64,7 @@ export function Summary(props: Props) {
             <hr />
 
             <div className="links">
-                <MaterialLinkButton
-                    href="cv.pdf"
-                    symbol="download"
-                    text="CV"
-                />
+                <CvLinkButton />
                 <IconLinkButton
                     src={linkedin}
                     alt="LinkedIn"
