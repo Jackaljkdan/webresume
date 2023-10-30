@@ -6,6 +6,7 @@ import "./LocaleButton.scss";
 import { localeAtom } from "../localization/LocaleAtom";
 import { locales } from "../localization/Locale";
 import { AnimatedOpen } from "../utils/AnimatedOpen";
+import { fasterDefault } from "../spring/configs";
 
 type Props = {
     className?: string,
@@ -31,6 +32,7 @@ export function LocaleButton(props: Props) {
             <AnimatedOpen
                 contentClassName="locales-list"
                 isOpen={isOpen}
+                springConfig={fasterDefault}
             >
                 <hr />
                 {locales.map(el => (
