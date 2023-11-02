@@ -14,6 +14,7 @@ export function MaterialLinkButton(props: Props) {
                 "material-link",
                 "flex items-center",
                 "text-white",
+                "hover:text-white hover:brightness-[.6]",
                 props.className,
             )}
             href={props.href}

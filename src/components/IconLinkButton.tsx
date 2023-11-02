@@ -12,6 +12,7 @@ export function IconLinkButton(props: Props) {
         <a
             className={classNames(
                 "flex items-center",
+                "hover:brightness-[.6]",
                 props.className,
             )}
             href={props.href}
