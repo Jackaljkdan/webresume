@@ -10,7 +10,10 @@ export function UpdatedAt(props: Props) {
     const strings = useStrings();
 
     return (
-        <div className={classNames(props.className, "updated-at")}>
+        <div className={classNames(
+            "text-xs",
+            props.className,
+        )}>
             {strings.updated} @ {BUILD_DATE.substring(0, 10)}
         </div>
     );

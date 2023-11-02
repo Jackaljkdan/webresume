@@ -18,26 +18,34 @@ export function LocaleButton(props: Props) {
     const ref = useClickOutside<HTMLDivElement>(() => setIsOpen(false));
 
     return (
-        <div ref={ref} className={classNames(props.className, "locale-btn-wrapper")}>
+        <div ref={ref} className={classNames(
+            "border-[1px] text-xs",
+            props.className,
+        )}>
             <button
-                className={classNames("locale-btn", {
+                className={classNames({
+                    uppercase: true,
+                    "flex items-center": true,
+                    "py-[.05rem] px-2": true,
                     open: isOpen,
                 })}
                 onClick={() => setIsOpen(value => !value)}
             >
                 {locale}
-                <span className="material-symbols-outlined">
+                <span className="material-symbols-outlined text-xl translate-x-1">
                     expand_more
                 </span>
             </button>
             <AnimatedOpen
-                contentClassName="locales-list"
+                wrapperClassName="overflow-hidden"
+                contentClassName="flex flex-col"
                 isOpen={isOpen}
                 springConfig={fasterDefault}
             >
                 <hr />
                 {locales.map(el => (
                     <button
+                        className="uppercase m-1"
                         key={el}
                         onClick={() => {
                             setLocale(el);
