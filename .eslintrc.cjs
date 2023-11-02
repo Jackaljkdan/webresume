@@ -16,6 +16,7 @@ module.exports = {
         ],
         "indent": ["error", 4, { "SwitchCase": 1 }],
         "semi": ["error", "always"],
+        "comma-dangle": ["error", "always-multiline"],
         "quotes": ["error", "double"],
         "@typescript-eslint/no-explicit-any": "off",
     },
