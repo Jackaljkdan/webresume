@@ -22,7 +22,13 @@ export function ProgressBar(props: Props) {
 
     return (
         <animated.div
-            className={classNames(props.className, "progress-bar")}
+            className={classNames(
+                "w-[75px] h-[75px] m-3",
+                "rounded-full",
+                "flex flex-col justify-center items-center",
+                "text-center text-xs leading-[.8rem]",
+                props.className,
+            )}
             style={springs}
         >
             {props.children}

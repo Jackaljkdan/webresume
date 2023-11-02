@@ -16,12 +16,17 @@ type Props = {
 export function Summary(props: Props) {
     const strings = useStrings();
     return (
-        <div className={classNames(props.className, "summary")}>
+        <div className={classNames(
+            "summary",
+            "flex flex-col justify-between sm:p-4",
+            "bg-neutral-800",
+            props.className,
+        )}>
             <div>
-                <div className="pic-and-name">
-                    <MyPicture />
+                <div className="flex justify-between mb-6">
+                    <MyPicture className="max-w-[50%]" />
 
-                    <h2 className="my-name title">
+                    <h2 className="self-end ml-8 text-right text-accent">
                         Daniele Cortesi
                     </h2>
                 </div>
@@ -32,9 +37,9 @@ export function Summary(props: Props) {
                 </div>
             </div>
 
-            <hr />
+            <hr className="my-8 w-[90%]" />
 
-            <div className="skills">
+            <div className="flex flex-wrap justify-evenly">
                 <ProgressBar percentage={94}>
                     React {<br />} Native
                 </ProgressBar>
@@ -60,9 +65,9 @@ export function Summary(props: Props) {
                 </ProgressBar>
             </div>
 
-            <hr />
+            <hr className="my-8 w-[90%]" />
 
-            <div className="links">
+            <div className="flex flex-row justify-evenly items-center">
                 <CvLinkButton />
                 <IconLinkButton
                     src={linkedin}

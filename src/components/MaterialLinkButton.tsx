@@ -10,7 +10,11 @@ type Props = {
 export function MaterialLinkButton(props: Props) {
     return (
         <a
-            className={classNames(props.className, "material-link")}
+            className={classNames(
+                "material-link",
+                "flex items-center",
+                props.className,
+            )}
             href={props.href}
         >
             {props.text
