@@ -1,6 +1,5 @@
 import classNames from "classnames";
 
-import "./ExperienceTitle.scss";
 import { useStrings } from "../localization/useStrings";
 
 type Props = {

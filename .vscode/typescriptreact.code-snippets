@@ -21,8 +21,6 @@
         "body": [
             "import classNames from \"classnames\";",
             "",
-            "import \"./$TM_FILENAME_BASE.scss\";",
-            "",
             "type Props = {",
             "    className?: string,",
             "};",

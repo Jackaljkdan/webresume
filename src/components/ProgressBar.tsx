@@ -1,7 +1,6 @@
 import classNames from "classnames";
 import { useSpring, animated, config } from "@react-spring/web";
 
-import "./ProgressBar.scss";
 import v from "../_variables.module.scss";
 
 type Props = {

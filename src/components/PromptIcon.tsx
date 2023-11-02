@@ -1,7 +1,5 @@
 import classNames from "classnames";
 
-import "./PromptIcon.scss";
-
 type Props = {
     underscore?: boolean,
     rotate?: boolean,

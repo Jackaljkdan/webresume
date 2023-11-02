@@ -1,7 +1,5 @@
 import classNames from "classnames";
 
-import "./IconLinkButton.scss";
-
 type Props = {
     src: string,
     alt?: string,

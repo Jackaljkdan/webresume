@@ -1,6 +1,5 @@
 import classNames from "classnames";
 
-import "./Summary.scss";
 import { MyPicture } from "./MyPicture";
 import { ProgressBar } from "./ProgressBar";
 import { MaterialLinkButton } from "./MaterialLinkButton";

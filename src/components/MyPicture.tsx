@@ -1,6 +1,5 @@
 import classNames from "classnames";
 
-import "./MyPicture.scss";
 import picture from "../assets/me.jpg";
 
 type Props = {

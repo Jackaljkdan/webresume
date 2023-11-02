@@ -1,7 +1,5 @@
 import classNames from "classnames";
 
-import "./MaterialLinkButton.scss";
-
 type Props = {
     symbol: string,
     href: string,

@@ -2,7 +2,6 @@ import { useState } from "react";
 import classNames from "classnames";
 import { useAtom } from "jotai";
 
-import "./LocaleButton.scss";
 import { localeAtom } from "../localization/LocaleAtom";
 import { locales } from "../localization/Locale";
 import { AnimatedOpen } from "../utils/AnimatedOpen";

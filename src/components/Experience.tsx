@@ -1,6 +1,5 @@
 import classNames from "classnames";
 
-import "./Experience.scss";
 import { useStrings } from "../localization/useStrings";
 import { Li } from "./Li";
 import { ExperienceTitle } from "./ExperienceTitle";
