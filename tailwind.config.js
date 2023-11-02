@@ -12,6 +12,7 @@ export default {
                 "sm": "690px",
             },
             colors: {
+                back: colors.neutral[900],
                 accent: colors.red[600],
                 link: colors.cyan[400],
                 "link-h": colors.cyan[600],

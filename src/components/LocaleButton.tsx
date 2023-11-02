@@ -19,7 +19,7 @@ export function LocaleButton(props: Props) {
 
     return (
         <div ref={ref} className={classNames(
-            "border-[1px] text-xs hover:border-accent transition-all",
+            "border-[1px] text-xs bg-back hover:border-accent transition-all",
             props.className,
         )}>
             <button

@@ -7,7 +7,7 @@
     font-synthesis: style weight;
     text-rendering: optimizeLegibility;
 
-    @apply text-white bg-neutral-900 text-base;
+    @apply text-white bg-back text-base;
 }
 
 #root {
