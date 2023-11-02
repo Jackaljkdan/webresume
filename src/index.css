@@ -7,7 +7,7 @@
     font-synthesis: style weight;
     text-rendering: optimizeLegibility;
 
-    @apply text-neutral-50 bg-neutral-900 text-base;
+    @apply text-white bg-neutral-900 text-base;
 }
 
 #root {
@@ -32,5 +32,5 @@ h2 {
 }
 
 a {
-    @apply text-link hover:text-link-h;
+    @apply text-link hover:text-link-h font-bold;
 }

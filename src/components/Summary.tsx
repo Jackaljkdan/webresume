@@ -18,7 +18,7 @@ export function Summary(props: Props) {
     return (
         <div className={classNames(
             "summary",
-            "flex flex-col justify-between sm:p-4",
+            "flex flex-col justify-between",
             "bg-neutral-800",
             props.className,
         )}>

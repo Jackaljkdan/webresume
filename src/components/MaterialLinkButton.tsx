@@ -13,6 +13,7 @@ export function MaterialLinkButton(props: Props) {
             className={classNames(
                 "material-link",
                 "flex items-center",
+                "text-white",
                 props.className,
             )}
             href={props.href}
