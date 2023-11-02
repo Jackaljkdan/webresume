@@ -11,7 +11,9 @@ type Props = {
 export function Li(props: Props) {
     const nested = props.nested ?? false;
     return (
-        <li className={classNames(props.className)}>
+        <li className={classNames(props.className, {
+            "ml-10": props.nested,
+        })}>
             <PromptIcon
                 underscore={!nested}
                 rotate={nested}

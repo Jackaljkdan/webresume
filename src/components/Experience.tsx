@@ -11,12 +11,14 @@ type Props = {
 export function Experience(props: Props) {
     const strings = useStrings();
     return (
-        <div className={classNames(props.className, "experience")}>
-            <h1 className="title">
+        <div className={classNames(
+            props.className,
+        )}>
+            <h1 className="text-accent">
                 {strings.exp}
             </h1>
 
-            <hr />
+            <hr className="my-10" />
 
             <ExperienceTitle
                 title="Creepy Bug"
@@ -25,7 +27,7 @@ export function Experience(props: Props) {
             />
             <div>
                 {strings.creepybug_dream}
-                <ul>
+                <ul className="my-4">
                     <Li>
                         <a href="https://store.steampowered.com/app/2371160/When_God_Left_Us/">
                             When God Left Us
@@ -49,7 +51,7 @@ export function Experience(props: Props) {
                 </ul>
             </div>
 
-            <hr />
+            <hr className="my-10" />
 
             <ExperienceTitle
                 title="Melazeta"
@@ -58,7 +60,7 @@ export function Experience(props: Props) {
             />
             <div>
                 {strings.melaz_overview}
-                <ul>
+                <ul className="my-4">
                     <Li>
                         {strings.melaz_react}
                         <ul>
@@ -81,7 +83,7 @@ export function Experience(props: Props) {
                 </ul>
             </div>
 
-            <hr />
+            <hr className="my-10" />
 
             <ExperienceTitle
                 title="Just Funny Games"
@@ -92,8 +94,7 @@ export function Experience(props: Props) {
                 {strings.jfg}.
             </div>
 
-            <hr />
-
+            <hr className="my-10" />
 
             <ExperienceTitle
                 title={strings.uni_title}
@@ -102,17 +103,17 @@ export function Experience(props: Props) {
             />
             <div className="uni">
                 {strings.uni_degree}
-                <ul>
-                    <Li>
+                <ul className="my-4">
+                    <Li className="mb-4">
                         {strings.uni_thesis} <a href="https://amslaurea.unibo.it/16138/1/tesi%20Cortesi%20Daniele.pdf">Reinforcement Learning in Rogue</a>
                     </Li>
-                    <Li>
+                    <Li className="mb-4">
                         Asperti, A., Cortesi, D., De Pieri, C., Pedrini, G., & Sovrano, F. (2019).
                         {" "}<a href="https://ieeexplore.ieee.org/abstract/document/8641337">Crawling in rogue's dungeons with deep reinforcement techniques.</a>
                         {" "}<i>IEEE Transactions on Games, 12</i>
                         (2), 177-186.
                     </Li>
-                    <Li>
+                    <Li className="mb-4">
                         Asperti, A., Cortesi, D., & Sovrano, F. (2019).
                         {" "}<a href="https://arxiv.org/abs/1804.08685">Crawling in rogue’s dungeons with (partitioned) a3c.</a>
                         {" "}<i>In Machine Learning, Optimization, and Data Science: 4th International Conference, LOD 2018, Volterra, Italy, September 13-16, 2018, Revised Selected Papers 4 (pp. 264-275).</i>

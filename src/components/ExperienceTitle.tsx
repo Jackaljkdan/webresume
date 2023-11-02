@@ -12,15 +12,19 @@ type Props = {
 export function ExperienceTitle(props: Props) {
     const strings = useStrings();
     return (
-        <div className={classNames(props.className, "experience-title")}>
+        <div className={classNames(
+            "flex justify-between items-center",
+            "my-8",
+            props.className,
+        )}>
             <h2>
                 {props.title}
             </h2>
-            <div className="time">
+            <div className="text-sm leading-4 text-accent text-right italic whitespace-nowrap">
                 <div>
                     {props.duration}
                 </div>
-                <div className="from">
+                <div className="text-[0.75em]">
                     {strings.exp_from} {props.from}
                 </div>
             </div>

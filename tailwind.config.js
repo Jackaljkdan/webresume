@@ -13,11 +13,10 @@ export default {
             },
             colors: {
                 accent: colors.red[600],
-                link: colors.cyan[500],
-                "link-h": colors.cyan[800],
+                link: colors.cyan[400],
+                "link-h": colors.cyan[600],
             },
         },
     },
     plugins: [],
 };
-
