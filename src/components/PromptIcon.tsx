@@ -16,14 +16,17 @@ export function PromptIcon(props: Props) {
         )}>
             <span className={classNames(
                 "material-symbols-outlined",
-                "-ml-2 -mr-3 translate-y-1",
+                "-ml-2 translate-y-1",
                 { "rotate-90": rotate },
             )}>
                 chevron_right
             </span>
-            <span className="material-symbols-outlined translate-y-1">
-                {underscore ? "minimize" : null}
-            </span>
+            {underscore
+                ? <span className="material-symbols-outlined -ml-3 translate-y-1">
+                    minimize
+                </span>
+                : null
+            }
         </span>
     );
 }
