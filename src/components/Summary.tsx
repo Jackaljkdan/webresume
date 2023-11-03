@@ -19,7 +19,8 @@ export function Summary(props: Props) {
         <div className={classNames(
             "summary",
             "flex flex-col justify-between",
-            "bg-neutral-800",
+            "bg-back-con dark:bg-back-con-dark",
+            "transition-[background-color]",
             props.className,
         )}>
             <div>
@@ -37,7 +38,7 @@ export function Summary(props: Props) {
                 </div>
             </div>
 
-            <hr className="my-8 w-[90%]" />
+            <hr className="my-8 mx-auto w-[90%]" />
 
             <div className="flex flex-wrap justify-evenly">
                 <ProgressBar percentage={94}>
@@ -65,7 +66,7 @@ export function Summary(props: Props) {
                 </ProgressBar>
             </div>
 
-            <hr className="my-8 w-[90%]" />
+            <hr className="my-8 mx-auto w-[90%]" />
 
             <div className="flex flex-row justify-evenly items-center">
                 <CvLinkButton />

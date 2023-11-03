@@ -36,6 +36,15 @@
         ],
     },
 
+    "React hook": {
+        "prefix": "reho",
+        "body": [
+            "export function $TM_FILENAME_BASE() {",
+            "    $0",
+            "}",
+        ],
+    },
+
     "React use state": {
         "prefix": "use",
         "body": [

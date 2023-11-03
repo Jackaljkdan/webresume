@@ -19,21 +19,28 @@ export function LocaleButton(props: Props) {
 
     return (
         <div ref={ref} className={classNames(
-            "border-[1px] text-xs bg-back hover:border-accent transition-all",
+            "border-[1px] text-xs",
+            "bg-white dark:bg-back",
+            "border-back dark:border-white",
+            "hover:border-accent dark:hover:border-accent",
+            "transition-all",
             props.className,
         )}>
             <button
-                className={classNames({
-                    uppercase: true,
-                    "flex items-center": true,
-                    "py-[.05rem] px-2": true,
-                    "hover:brightness-[.6]": true,
-                    open: isOpen,
-                })}
+                className={classNames(
+                    "uppercase",
+                    "flex items-center",
+                    "py-[.05rem] px-2",
+                    "hover:brightness-[.6]",
+                )}
                 onClick={() => setIsOpen(value => !value)}
             >
                 {locale}
-                <span className="material-symbols-outlined text-xl translate-x-1">
+                <span className={classNames(
+                    "material-symbols-outlined text-xl translate-x-1",
+                    "transition-transform",
+                    { "rotate-180": isOpen },
+                )}>
                     expand_more
                 </span>
             </button>

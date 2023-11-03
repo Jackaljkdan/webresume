@@ -8,7 +8,11 @@ type Props = {
 
 export function MyPicture(props: Props) {
     return (
-        <div className={classNames(props.className, "border-2 box-border")}>
+        <div className={classNames(
+            "border-2 box-border",
+            "border-back dark:border-white",
+            props.className,
+        )}>
             <img src={picture} alt="My picture" />
         </div>
     );

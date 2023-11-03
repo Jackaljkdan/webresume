@@ -7,12 +7,15 @@
     font-synthesis: style weight;
     text-rendering: optimizeLegibility;
 
-    @apply text-white bg-back text-base;
+    @apply text-base;
 }
 
 #root {
     @apply flex flex-col items-center sm:flex-row sm:items-start;
     @apply relative sm:p-8 pb-12 box-border;
+
+    @apply text-back dark:text-white;
+    @apply bg-neutral-50 dark:bg-back;
 }
 
 h1 {
@@ -29,6 +32,10 @@ h2 {
     margin-block-end: 0;
 
     @apply font-bold leading-6;
+}
+
+hr {
+    @apply border-black dark:border-white;
 }
 
 a {
