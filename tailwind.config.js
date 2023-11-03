@@ -15,5 +15,8 @@ export default {
             colors,
         },
     },
+    future: {
+        hoverOnlyWhenSupported: true,
+    },
     plugins: [],
 };
