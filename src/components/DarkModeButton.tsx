@@ -12,7 +12,10 @@ export function DarkModeButton(props: Props) {
 
     return (
         <button
-            className={classNames(props.className)}
+            className={classNames(
+                "flex flex-col justify-center",
+                props.className,
+            )}
             onClick={() => setDarkMode(v => !v)}
         >
             <span className="material-symbols-outlined text-clickable">

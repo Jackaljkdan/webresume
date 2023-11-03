@@ -8,6 +8,8 @@ import linkedin from "../assets/linkedin.png";
 import { PromptIcon } from "./PromptIcon";
 import { useStrings } from "../localization/useStrings";
 import { CvLinkButton } from "./CvLinkButton";
+import { LocaleButton } from "./LocaleButton";
+import { DarkModeButton } from "./DarkModeButton";
 
 type Props = {
     className?: string,
@@ -24,12 +26,15 @@ export function Summary(props: Props) {
             props.className,
         )}>
             <div>
-                <div className="flex justify-between mb-6">
+                <div className="relative flex justify-between mb-6">
                     <MyPicture className="max-w-[50%]" />
 
                     <h2 className="self-end ml-8 text-right text-accent">
                         Daniele Cortesi
                     </h2>
+
+                    <DarkModeButton className="absolute top-1 right-16" />
+                    <LocaleButton className="absolute top-0 right-0" />
                 </div>
 
                 <div className="about">
