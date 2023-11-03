@@ -18,6 +18,7 @@ module.exports = {
         "semi": ["error", "always"],
         "comma-dangle": ["error", "always-multiline"],
         "quotes": ["error", "double"],
+        "no-trailing-spaces": "error",
         "@typescript-eslint/no-explicit-any": "off",
     },
 }
