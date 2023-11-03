@@ -21,12 +21,11 @@ export function PromptIcon(props: Props) {
             )}>
                 chevron_right
             </span>
-            {underscore
-                ? <span className="material-symbols-outlined -ml-3 translate-y-1">
+            <If condition={underscore}>
+                <span className="material-symbols-outlined -ml-3 translate-y-1">
                     minimize
                 </span>
-                : null
-            }
+            </If>
         </span>
     );
 }

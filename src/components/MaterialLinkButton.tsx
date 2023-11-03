@@ -19,12 +19,11 @@ export function MaterialLinkButton(props: Props) {
             )}
             href={props.href}
         >
-            {props.text
-                ? <span className="link-text">
+            <If condition={props.text}>
+                <span className="link-text">
                     {props.text}
                 </span>
-                : null
-            }
+            </If>
             <span className="material-symbols-outlined">
                 {props.symbol}
             </span>
