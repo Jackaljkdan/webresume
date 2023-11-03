@@ -15,7 +15,7 @@ export function DarkModeButton(props: Props) {
             className={classNames(props.className)}
             onClick={() => setDarkMode(v => !v)}
         >
-            <span className="material-symbols-outlined">
+            <span className="material-symbols-outlined text-clickable">
                 <Choose>
                     <When condition={darkMode}>
                         light_mode

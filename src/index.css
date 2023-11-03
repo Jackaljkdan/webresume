@@ -41,3 +41,9 @@ hr {
 a {
     @apply text-link hover:text-link-h font-bold;
 }
+
+.text-clickable {
+    @apply text-black dark:text-white;
+    @apply hover:text-black hover:invert-[.6];
+    @apply dark:hover:text-white dark:hover:invert-0 dark:hover:brightness-[.6];
+}

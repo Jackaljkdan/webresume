@@ -31,7 +31,7 @@ export function LocaleButton(props: Props) {
                     "uppercase",
                     "flex items-center",
                     "py-[.05rem] px-2",
-                    "hover:brightness-[.6]",
+                    "text-clickable",
                 )}
                 onClick={() => setIsOpen(value => !value)}
             >
@@ -53,7 +53,7 @@ export function LocaleButton(props: Props) {
                 <hr />
                 {locales.map(el => (
                     <button
-                        className="uppercase m-1 hover:brightness-[.6]"
+                        className="uppercase m-1 text-clickable"
                         key={el}
                         onClick={() => {
                             setLocale(el);
