@@ -11,15 +11,13 @@ type Props = {
     children: React.ReactNode,
 };
 
+function ringStyle(percentage: number) {
+    return `conic-gradient(${colors.accent} ${percentage}%, transparent 0)`;
+}
 
 export function ProgressBar(props: Props) {
     const darkMode = useAtomValue(darkModeAtom);
-
-    function ringStyle(percentage: number) {
-        const bg = !darkMode ? colors["back-con"] : colors["back-con-dark"];
-        const accent = colors.accent;
-        return `radial-gradient(closest-side, ${bg} 84%, transparent 85% 100%), conic-gradient(${accent} ${percentage}%, transparent 0)`;
-    }
+    const bgColor = !darkMode ? colors["back-con"] : colors["back-con-dark"];
 
     const springs = useSpring({
         from: { background: ringStyle(0) },
@@ -32,13 +30,20 @@ export function ProgressBar(props: Props) {
             className={classNames(
                 "w-[75px] h-[75px] m-3",
                 "rounded-full",
-                "flex flex-col justify-center items-center",
                 "text-center text-xs leading-[.8rem]",
                 props.className,
             )}
             style={springs}
         >
-            {props.children}
+            <div
+                className={classNames(
+                    "w-full h-full",
+                    "flex flex-col justify-center items-center",
+                )}
+                style={{ background: `radial-gradient(closest-side, ${bgColor} 84%, transparent 85% 100%)` }}
+            >
+                {props.children}
+            </div>
         </animated.div>
     );
 }
