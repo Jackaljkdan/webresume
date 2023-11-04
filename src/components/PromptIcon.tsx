@@ -11,7 +11,7 @@ export function PromptIcon(props: Props) {
     const rotate = props.rotate ?? false;
     return (
         <span className={classNames(
-            "mr-3",
+            "mr-3 select-none",
             props.className,
         )}>
             <span className={classNames(
