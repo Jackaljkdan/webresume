@@ -33,7 +33,7 @@ export function Summary(props: Props) {
                         Daniele Cortesi
                     </h2>
 
-                    <DarkModeButton className="absolute top-1 right-16" />
+                    <DarkModeButton className="absolute top-[.1rem] right-16" />
                     <LocaleButton className="absolute top-0 right-0" />
                 </div>
 
