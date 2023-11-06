@@ -105,6 +105,9 @@ export function Experience(props: Props) {
                 {strings.uni_degree}
                 <ul className="my-4">
                     <Li className="mb-4">
+                        {strings.uni_grade}
+                    </Li>
+                    <Li className="mb-4">
                         {strings.uni_thesis} <a href="https://amslaurea.unibo.it/16138/1/tesi%20Cortesi%20Daniele.pdf">Reinforcement Learning in Rogue</a>
                     </Li>
                     <Li className="mb-4">
