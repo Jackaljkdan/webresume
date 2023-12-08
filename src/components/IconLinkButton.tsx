@@ -25,7 +25,6 @@ export function IconLinkButton(props: Props) {
                 className={props.imgClassName}
                 src={props.src}
                 alt={props.alt}
-                groupHover={true}
             />
         </a>
     );
