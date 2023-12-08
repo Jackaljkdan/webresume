@@ -1,6 +1,6 @@
 export default {
     en: {
-        summary: "I'm a software developer by heart and trade. I love solving the riddles of programming and while doing so implementing great user experiences envisioned by great designers.",
+        summary: "I'm a software engineer by heart and trade. I love solving the riddles of programming and while doing so implementing great user experiences envisioned by great designers.",
         exp: "Experience",
         exp_from: "from",
         exp_endof: "late",
@@ -8,6 +8,7 @@ export default {
         exp_year: "year",
         exp_years: "years",
         exp_months: "months",
+        exp_ongoing: "ongoing",
         creepybug_dream: "Living the Unity indie game development dream in my individual company:",
         melaz_overview: "Edu games and gamified interactive experiences:",
         melaz_react: "React Native apps & React web apps",
@@ -21,7 +22,7 @@ export default {
         updated: "Updated",
     },
     it: {
-        summary: "Sono uno sviluppatore software per passione e mestiere. Amo risolvere gli enigmi della programmazione e nel farlo implementare splendide esperienze utente ideate da grandi designer.",
+        summary: "Sono un software engineer per passione e mestiere. Amo risolvere gli enigmi della programmazione e nel farlo implementare splendide esperienze utente ideate da grandi designer.",
         exp: "Esperienza",
         exp_from: "da",
         exp_endof: "fine",
@@ -29,6 +30,7 @@ export default {
         exp_year: "anno",
         exp_years: "anni",
         exp_months: "mesi",
+        exp_ongoing: "attuale",
         creepybug_dream: "Il sogno dello sviluppatore di videogiochi indie Unity nella mia ditta individuale:",
         melaz_overview: "Edu games ed esperienze interattive gamificate:",
         melaz_react: "App React Native e Web App React",

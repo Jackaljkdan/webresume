@@ -23,7 +23,7 @@ export function Experience(props: Props) {
             <ExperienceTitle
                 title="Creepy Bug"
                 from={strings.exp_endof + " 2022"}
-                duration={"1 " + strings.exp_year}
+                duration={"1 " + strings.exp_year + " - " + strings.exp_ongoing}
             />
             <div>
                 {strings.creepybug_dream}

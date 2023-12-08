@@ -6,7 +6,7 @@ import { UpdatedAt } from "./components/UpdatedAt";
 function App() {
     return (
         <>
-            <Summary className="pt-10 px-8 pb-4 sm:p-4 sm:flex-1 sm:min-w-[290px] sm:max-w-[390px]" />
+            <Summary className="pt-10 px-8 pb-4 sm:p-4 sm:flex-1 sm:min-w-[290px] sm:max-w-[383px]" />
             <Experience className="p-8 sm:pt-4 sm:flex-[2]" />
             <div className="absolute bottom-8 right-8 flex items-center">
                 <SourceLink />
