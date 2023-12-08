@@ -54,7 +54,7 @@ export function Summary(props: Props) {
                     React
                 </ProgressBar>
 
-                <ProgressBar percentage={60}>
+                <ProgressBar percentage={80}>
                     HTML {<br />} CSS {<br />} SASS
                 </ProgressBar>
 
