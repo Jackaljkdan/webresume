@@ -2,6 +2,9 @@ import classNames from "classnames";
 import { useAtom } from "jotai";
 
 import { darkModeAtom } from "../utils/useDarkMode";
+import lightModeImg from "../assets/light_mode.png";
+import darkModeImg from "../assets/dark_mode.png";
+import { GroupHoverIcon } from "./GroupHoverIcon";
 
 type Props = {
     className?: string,
@@ -13,21 +16,15 @@ export function DarkModeButton(props: Props) {
     return (
         <button
             className={classNames(
-                "flex flex-col justify-center",
+                "flex flex-col justify-center group",
                 props.className,
             )}
             onClick={() => setDarkMode(v => !v)}
         >
-            <span className="material-symbols-outlined text-clickable text-xl">
-                <Choose>
-                    <When condition={darkMode}>
-                        light_mode
-                    </When>
-                    <Otherwise>
-                        dark_mode
-                    </Otherwise>
-                </Choose>
-            </span>
-        </button>
+            <GroupHoverIcon
+                alt={darkMode ? "light mode" : "dark mode"}
+                src={darkMode ? lightModeImg : darkModeImg}
+            />
+        </button >
     );
 }

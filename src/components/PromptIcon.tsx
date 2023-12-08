@@ -11,19 +11,18 @@ export function PromptIcon(props: Props) {
     const rotate = props.rotate ?? false;
     return (
         <span className={classNames(
-            "mr-3 select-none",
+            "mr-3 select-none font-bold",
             props.className,
         )}>
             <span className={classNames(
-                "material-symbols-outlined",
-                "-ml-2 translate-y-1",
+                "inline-block",
                 { "rotate-90": rotate },
             )}>
-                chevron_right
+                &gt;
             </span>
             <If condition={underscore}>
-                <span className="material-symbols-outlined -ml-3 translate-y-1">
-                    minimize
+                <span className="">
+                    _
                 </span>
             </If>
         </span>

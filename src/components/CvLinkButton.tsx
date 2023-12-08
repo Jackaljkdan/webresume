@@ -1,14 +1,16 @@
 import { useAtomValue } from "jotai";
 
 import { localeAtom } from "../localization/LocaleAtom";
-import { MaterialLinkButton } from "./MaterialLinkButton";
+import { IconLinkButton } from "./IconLinkButton";
+import downloadImg from "../assets/download.png";
 
 export function CvLinkButton() {
     const locale = useAtomValue(localeAtom);
     return (
-        <MaterialLinkButton
+        <IconLinkButton
+            src={downloadImg}
+            alt="download"
             href={`cv-${locale}.pdf`}
-            symbol="download"
             text="CV"
         />
     );

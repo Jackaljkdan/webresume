@@ -45,9 +45,16 @@
 }
 
 @layer components {
-    .text-clickable {
+    .text-color {
         @apply text-black dark:text-white;
-        @apply hover:text-black hover:invert-[.6];
-        @apply dark:hover:text-white dark:hover:invert-0 dark:hover:brightness-[.6];
+    }
+
+    .text-contrast {
+        @apply invert-[.6] dark:invert-0 dark:brightness-[.6];   
+    }
+
+    .text-clickable {
+        @apply text-color;
+        @apply hover:text-contrast;
     }
 }

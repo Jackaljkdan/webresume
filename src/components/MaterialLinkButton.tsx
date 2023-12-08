@@ -11,7 +11,6 @@ export function MaterialLinkButton(props: Props) {
     return (
         <a
             className={classNames(
-                "material-link",
                 "flex items-center",
                 "text-clickable",
                 props.className,
@@ -19,7 +18,7 @@ export function MaterialLinkButton(props: Props) {
             href={props.href}
         >
             <If condition={props.text}>
-                <span className="link-text">
+                <span>
                     {props.text}
                 </span>
             </If>

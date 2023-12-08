@@ -2,9 +2,10 @@ import classNames from "classnames";
 
 import { MyPicture } from "./MyPicture";
 import { ProgressBar } from "./ProgressBar";
-import { MaterialLinkButton } from "./MaterialLinkButton";
 import { IconLinkButton } from "./IconLinkButton";
-import linketree from "../assets/linktree.png";
+import linketreeImg from "../assets/linktree.png";
+import mailImg from "../assets/mail.png";
+import infoImg from "../assets/info.png";
 import { PromptIcon } from "./PromptIcon";
 import { useStrings } from "../localization/useStrings";
 import { CvLinkButton } from "./CvLinkButton";
@@ -33,7 +34,7 @@ export function Summary(props: Props) {
                         Daniele Cortesi
                     </h2>
 
-                    <DarkModeButton className="absolute top-[.1rem] right-[4.5rem]" />
+                    <DarkModeButton className="absolute top-1 right-[4.5rem]" />
                     <LocaleButton className="absolute top-0 right-0" />
                 </div>
 
@@ -76,18 +77,20 @@ export function Summary(props: Props) {
             <div className="flex flex-row justify-evenly items-center">
                 <CvLinkButton />
                 <IconLinkButton
-                    imgClassName="p-[1px]"
-                    src={linketree}
+                    imgClassName="py-[.22rem]"
+                    src={linketreeImg}
                     alt="Linktree"
                     href="https://linktr.ee/danicortesi"
                 />
-                <MaterialLinkButton
+                <IconLinkButton
+                    src={mailImg}
+                    alt="mail"
                     href="mailto:danicortesi.dev@gmail.com"
-                    symbol="mail"
                 />
-                <MaterialLinkButton
+                <IconLinkButton
+                    src={infoImg}
+                    alt="info"
                     href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                    symbol="help"
                 />
             </div>
 

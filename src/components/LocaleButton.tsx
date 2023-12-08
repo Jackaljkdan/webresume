@@ -37,11 +37,12 @@ export function LocaleButton(props: Props) {
             >
                 {locale}
                 <span className={classNames(
-                    "material-symbols-outlined text-xl translate-x-1",
-                    "transition-transform",
-                    { "rotate-180": isOpen },
+                    "ml-2 text-lg font-bold",
+                    "-translate-y-[.05rem] transition-transform",
+                    { "rotate-[270deg]": !isOpen },
+                    { "rotate-90 translate-x-[.1rem]": isOpen },
                 )}>
-                    expand_more
+                    &lt;
                 </span>
             </button>
             <AnimatedOpen
