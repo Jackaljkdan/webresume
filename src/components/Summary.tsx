@@ -64,7 +64,7 @@ export function Summary(props: Props) {
                 </ProgressBar>
 
                 <ProgressBar percentage={90}>
-                    C#
+                    C# {<br />} .NET
                 </ProgressBar>
 
                 <ProgressBar percentage={100}>
