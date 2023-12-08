@@ -73,7 +73,7 @@ export function Experience(props: Props) {
                         {strings.melaz_api}
                         <ul>
                             <Li nested={true}>
-                                React Query
+                                React/TanStack Query
                             </Li>
                         </ul>
                     </Li>
