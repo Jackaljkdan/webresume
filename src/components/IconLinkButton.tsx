@@ -5,6 +5,7 @@ type Props = {
     alt?: string,
     href: string,
     className?: string,
+    imgClassName?: string,
 };
 
 export function IconLinkButton(props: Props) {
@@ -18,7 +19,11 @@ export function IconLinkButton(props: Props) {
             )}
             href={props.href}
         >
-            <img className="h-5" src={props.src} alt={props.alt} />
+            <img
+                className={classNames("h-5", props.imgClassName)}
+                src={props.src}
+                alt={props.alt}
+            />
         </a>
     );
 }

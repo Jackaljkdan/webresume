@@ -4,7 +4,7 @@ import { MyPicture } from "./MyPicture";
 import { ProgressBar } from "./ProgressBar";
 import { MaterialLinkButton } from "./MaterialLinkButton";
 import { IconLinkButton } from "./IconLinkButton";
-import linkedin from "../assets/linkedin.png";
+import linketree from "../assets/linktree.png";
 import { PromptIcon } from "./PromptIcon";
 import { useStrings } from "../localization/useStrings";
 import { CvLinkButton } from "./CvLinkButton";
@@ -76,9 +76,10 @@ export function Summary(props: Props) {
             <div className="flex flex-row justify-evenly items-center">
                 <CvLinkButton />
                 <IconLinkButton
-                    src={linkedin}
-                    alt="LinkedIn"
-                    href="https://www.linkedin.com/in/daniele-cortesi-5b396360/"
+                    imgClassName="p-[1px]"
+                    src={linketree}
+                    alt="Linktree"
+                    href="https://linktr.ee/danicortesi"
                 />
                 <MaterialLinkButton
                     href="mailto:danicortesi.dev@gmail.com"
