@@ -2,7 +2,7 @@ import { useAtomValue } from "jotai";
 
 import { localeAtom } from "../localization/LocaleAtom";
 import { IconLinkButton } from "./IconLinkButton";
-import downloadImg from "../assets/download.png";
+import downloadImg from "../assets/download.svg";
 
 export function CvLinkButton() {
     const locale = useAtomValue(localeAtom);

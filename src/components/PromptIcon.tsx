@@ -1,5 +1,7 @@
 import classNames from "classnames";
 
+import chevronImg from "../assets/chevron.svg";
+
 type Props = {
     underscore?: boolean,
     rotate?: boolean,
@@ -10,21 +12,24 @@ export function PromptIcon(props: Props) {
     const underscore = props.underscore ?? true;
     const rotate = props.rotate ?? false;
     return (
-        <span className={classNames(
-            "mr-3 select-none font-bold",
+        <div className={classNames(
+            "inline mr-3 select-none",
             props.className,
         )}>
-            <span className={classNames(
-                "inline-block",
-                { "rotate-90": rotate },
-            )}>
-                &gt;
-            </span>
+            <img
+                className={classNames(
+                    "inline -ml-1 dark:invert",
+                    { "-translate-y-[.1rem]": !rotate },
+                    { "rotate-90": rotate },
+                )}
+                src={chevronImg}
+                alt="prompt icon"
+            />
             <If condition={underscore}>
-                <span className="">
+                <span className="-ml-1">
                     _
                 </span>
             </If>
-        </span>
+        </div>
     );
 }

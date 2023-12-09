@@ -7,6 +7,7 @@ import { locales } from "../localization/Locale";
 import { AnimatedOpen } from "../utils/AnimatedOpen";
 import { fasterDefault } from "../spring/configs";
 import { useClickOutside } from "../utils/useClickOutside";
+import chevronImg from "../assets/chevron.svg";
 
 type Props = {
     className?: string,
@@ -36,14 +37,15 @@ export function LocaleButton(props: Props) {
                 onClick={() => setIsOpen(value => !value)}
             >
                 {locale}
-                <span className={classNames(
-                    "ml-2 text-lg font-bold",
-                    "-translate-y-[.05rem] transition-transform",
-                    { "rotate-[270deg]": !isOpen },
-                    { "rotate-90 translate-x-[.1rem]": isOpen },
-                )}>
-                    &lt;
-                </span>
+                <img
+                    className={classNames(
+                        "dark:invert",
+                        "ml-1 -mr-1 transition-transform",
+                        { "rotate-90": !isOpen },
+                        { "-rotate-90": isOpen },
+                    )}
+                    src={chevronImg}
+                />
             </button>
             <AnimatedOpen
                 wrapperClassName="overflow-hidden"

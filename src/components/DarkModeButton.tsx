@@ -2,8 +2,8 @@ import classNames from "classnames";
 import { useAtom } from "jotai";
 
 import { darkModeAtom } from "../utils/useDarkMode";
-import lightModeImg from "../assets/light_mode.png";
-import darkModeImg from "../assets/dark_mode.png";
+import lightModeImg from "../assets/light_mode.svg";
+import darkModeImg from "../assets/dark_mode.svg";
 import { GroupHoverIcon } from "./GroupHoverIcon";
 
 type Props = {
@@ -22,6 +22,7 @@ export function DarkModeButton(props: Props) {
             onClick={() => setDarkMode(v => !v)}
         >
             <GroupHoverIcon
+                heightClassName="h-5"
                 alt={darkMode ? "light mode" : "dark mode"}
                 src={darkMode ? lightModeImg : darkModeImg}
             />

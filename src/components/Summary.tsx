@@ -3,9 +3,9 @@ import classNames from "classnames";
 import { MyPicture } from "./MyPicture";
 import { ProgressBar } from "./ProgressBar";
 import { IconLinkButton } from "./IconLinkButton";
-import linketreeImg from "../assets/linktree.png";
-import mailImg from "../assets/mail.png";
-import infoImg from "../assets/info.png";
+import linketreeImg from "../assets/linktree.svg";
+import mailImg from "../assets/mail.svg";
+import infoImg from "../assets/info.svg";
 import { PromptIcon } from "./PromptIcon";
 import { useStrings } from "../localization/useStrings";
 import { CvLinkButton } from "./CvLinkButton";
@@ -77,7 +77,7 @@ export function Summary(props: Props) {
             <div className="flex flex-row justify-evenly items-center">
                 <CvLinkButton />
                 <IconLinkButton
-                    imgClassName="py-[.22rem]"
+                    imgClassName="-translate-y-[.2rem]"
                     src={linketreeImg}
                     alt="Linktree"
                     href="https://linktr.ee/danicortesi"
