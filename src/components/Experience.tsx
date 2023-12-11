@@ -11,22 +11,24 @@ type Props = {
 export function Experience(props: Props) {
     const strings = useStrings();
     return (
-        <div className={classNames(
+        <main className={classNames(
             props.className,
         )}>
-            <h1 className="text-accent">
+            <h2 className="text-accent">
                 {strings.exp}
-            </h1>
+            </h2>
 
             <hr className="my-10" />
 
-            <ExperienceTitle
-                title="Creepy Bug"
-                from={strings.exp_endof + " 2022"}
-                duration={"1 " + strings.exp_year + " - " + strings.exp_ongoing}
-            />
-            <div>
-                {strings.creepybug_dream}
+            <section>
+                <ExperienceTitle
+                    title="Creepy Bug"
+                    from={strings.exp_endof + " 2022"}
+                    duration={"1 " + strings.exp_year + " - " + strings.exp_ongoing}
+                />
+                <p>
+                    {strings.creepybug_dream}
+                </p>
                 <ul className="my-4">
                     <Li>
                         <a href="https://store.steampowered.com/app/2371160/When_God_Left_Us/">
@@ -49,17 +51,19 @@ export function Experience(props: Props) {
                         </a>
                     </Li>
                 </ul>
-            </div>
+            </section>
 
             <hr className="my-10" />
 
-            <ExperienceTitle
-                title="Melazeta"
-                from={strings.exp_mid + " 2019"}
-                duration={"3+ " + strings.exp_years}
-            />
-            <div>
-                {strings.melaz_overview}
+            <section>
+                <ExperienceTitle
+                    title="Melazeta"
+                    from={strings.exp_mid + " 2019"}
+                    duration={"3+ " + strings.exp_years}
+                />
+                <p>
+                    {strings.melaz_overview}
+                </p>
                 <ul className="my-4">
                     <Li>
                         {strings.melaz_react}
@@ -81,28 +85,32 @@ export function Experience(props: Props) {
                         {strings.melaz_unity}
                     </Li>
                 </ul>
-            </div>
+            </section>
 
             <hr className="my-10" />
 
-            <ExperienceTitle
-                title="Just Funny Games"
-                from={strings.exp_endof + " 2018"}
-                duration={"6 " + strings.exp_months}
-            />
-            <div>
-                {strings.jfg}.
-            </div>
+            <section>
+                <ExperienceTitle
+                    title="Just Funny Games"
+                    from={strings.exp_endof + " 2018"}
+                    duration={"6 " + strings.exp_months}
+                />
+                <p>
+                    {strings.jfg}.
+                </p>
+            </section>
 
             <hr className="my-10" />
 
-            <ExperienceTitle
-                title={strings.uni_title}
-                from={strings.exp_endof + " 2012"}
-                duration={"5+ " + strings.exp_years}
-            />
-            <div className="uni">
-                {strings.uni_degree}
+            <section>
+                <ExperienceTitle
+                    title={strings.uni_title}
+                    from={strings.exp_endof + " 2012"}
+                    duration={"5+ " + strings.exp_years}
+                />
+                <p>
+                    {strings.uni_degree}
+                </p>
                 <ul className="my-4">
                     <Li className="mb-4">
                         {strings.uni_grade}
@@ -123,7 +131,7 @@ export function Experience(props: Props) {
                         {" "}Springer International Publishing.
                     </Li>
                 </ul>
-            </div>
-        </div>
+            </section>
+        </main>
     );
 }

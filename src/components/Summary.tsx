@@ -19,34 +19,34 @@ type Props = {
 export function Summary(props: Props) {
     const strings = useStrings();
     return (
-        <div className={classNames(
+        <header className={classNames(
             "summary",
             "flex flex-col justify-between",
             "bg-back-con dark:bg-back-con-dark",
             "transition-[background-color]",
             props.className,
         )}>
-            <div>
-                <div className="relative flex justify-between mb-6">
+            <section>
+                <header className="relative flex justify-between mb-6">
                     <MyPicture className="max-w-[50%]" />
 
-                    <h2 className="self-end ml-8 text-right text-accent">
+                    <h1 className="self-end ml-8 text-right text-accent">
                         Daniele Cortesi
-                    </h2>
+                    </h1>
 
                     <DarkModeButton className="absolute top-1 right-[4.5rem]" />
                     <LocaleButton className="absolute top-0 right-0" />
-                </div>
+                </header>
 
-                <div className="about">
+                <p>
                     <PromptIcon />
                     {strings.summary}
-                </div>
-            </div>
+                </p>
+            </section>
 
             <hr className="my-8 mx-auto w-[90%]" />
 
-            <div className="flex flex-wrap justify-evenly">
+            <section className="flex flex-wrap justify-evenly">
                 <ProgressBar percentage={94}>
                     React {<br />} Native
                 </ProgressBar>
@@ -70,11 +70,11 @@ export function Summary(props: Props) {
                 <ProgressBar percentage={100}>
                     Git
                 </ProgressBar>
-            </div>
+            </section>
 
             <hr className="my-8 mx-auto w-[90%]" />
 
-            <div className="flex flex-row justify-evenly items-center">
+            <footer className="flex flex-row justify-evenly items-center">
                 <CvLinkButton />
                 <IconLinkButton
                     imgClassName="-translate-y-[.2rem]"
@@ -92,8 +92,8 @@ export function Summary(props: Props) {
                     alt="info"
                     href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                 />
-            </div>
+            </footer>
 
-        </div>
+        </header>
     );
 }
