@@ -34,7 +34,8 @@ export function LocaleButton(props: Props) {
                     "py-[.05rem] px-2",
                     "text-clickable",
                 )}
-                onClick={() => setIsOpen(value => !value)}
+                onMouseDown={() => setIsOpen(value => !value)}
+                onFocus={() => setIsOpen(true)}
             >
                 {locale}
                 <img
