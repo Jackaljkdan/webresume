@@ -12,8 +12,8 @@ export function PromptIcon(props: Props) {
     const underscore = props.underscore ?? true;
     const rotate = props.rotate ?? false;
     return (
-        <div className={classNames(
-            "inline mr-3 select-none",
+        <span className={classNames(
+            "mr-3 select-none",
             props.className,
         )}>
             <img
@@ -30,6 +30,6 @@ export function PromptIcon(props: Props) {
                     _
                 </span>
             </If>
-        </div>
+        </span>
     );
 }

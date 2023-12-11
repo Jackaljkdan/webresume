@@ -20,7 +20,7 @@ export function ExperienceTitle(props: Props) {
             <h3>
                 {props.title}
             </h3>
-            <p className={classNames(
+            <div className={classNames(
                 "text-sm leading-4 whitespace-nowrap",
                 "text-accent text-right italic",
                 "ml-8",
@@ -31,7 +31,7 @@ export function ExperienceTitle(props: Props) {
                 <div className="text-[0.75em]">
                     {strings.exp_from} {props.from}
                 </div>
-            </p>
+            </div>
         </header>
     );
 }
