@@ -50,23 +50,25 @@ export function LocaleButton(props: Props) {
             </button>
             <AnimatedOpen
                 wrapperClassName="overflow-hidden"
-                contentClassName="flex flex-col"
                 isOpen={isOpen}
                 springConfig={fasterDefault}
             >
-                <hr />
-                {locales.map(el => (
-                    <button
-                        className="uppercase m-1 text-clickable"
-                        key={el}
-                        onClick={() => {
-                            setLocale(el);
-                            setIsOpen(false);
-                        }}
-                    >
-                        {el}
-                    </button>
-                ))}
+                <hr className="w-full" />
+                <ul className="flex flex-col items-center">
+                    {locales.map(el => (
+                        <li key={el}>
+                            <button
+                                className="uppercase m-1 text-clickable"
+                                onClick={() => {
+                                    setLocale(el);
+                                    setIsOpen(false);
+                                }}
+                            >
+                                {el}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
             </AnimatedOpen>
         </div>
     );

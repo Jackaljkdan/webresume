@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import React from "react";
 import useMeasure from "react-use-measure";
 import { AnimationConfig, animated, useSpring } from "@react-spring/web";
 
@@ -7,6 +8,7 @@ type Props = {
     wrapperClassName?: string,
     contentClassName?: string,
     springConfig?: Partial<AnimationConfig>,
+    element?: keyof JSX.IntrinsicElements,
     children: React.ReactNode,
 };
 
@@ -19,17 +21,21 @@ export function AnimatedOpen(props: Props) {
         config: props.springConfig,
     });
 
+    const wrapper = React.createElement(
+        props.element ?? "div",
+        {
+            className: props.contentClassName,
+            ref: ref,
+        },
+        props.children,
+    );
+
     return (
         <animated.div
             className={classNames(props.wrapperClassName)}
             style={spring}
-        >
-            <animated.div
-                className={props.contentClassName}
-                ref={ref}
-            >
-                {props.children}
-            </animated.div>
-        </animated.div>
+            children={wrapper}
+            aria-expanded={!props.isOpen}
+        />
     );
 }
