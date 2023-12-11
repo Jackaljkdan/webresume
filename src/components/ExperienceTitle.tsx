@@ -22,7 +22,7 @@ export function ExperienceTitle(props: Props) {
             </h3>
             <div className={classNames(
                 "text-sm leading-4 whitespace-nowrap",
-                "text-accent text-right italic",
+                "text-accent-light text-right italic",
                 "ml-8",
             )}>
                 <div>
