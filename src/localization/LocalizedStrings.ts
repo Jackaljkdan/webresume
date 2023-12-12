@@ -1,5 +1,6 @@
 export default {
     en: {
+        a11y_pic: "my picture",
         a11y_darkmode: "dark mode",
         summary: "I'm a software engineer by heart and trade. I love solving the riddles of programming and while doing so implementing great user experiences envisioned by great designers.",
         exp: "Experience",
@@ -23,6 +24,7 @@ export default {
         updated: "Updated",
     },
     it: {
+        a11y_pic: "la mia foto",
         a11y_darkmode: "tema scuro",
         summary: "Sono un software engineer per passione e mestiere. Amo risolvere gli enigmi della programmazione e nel farlo implementare splendide esperienze utente ideate da grandi designer.",
         exp: "Esperienza",
