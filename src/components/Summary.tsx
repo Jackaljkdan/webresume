@@ -11,6 +11,7 @@ import { useStrings } from "../localization/useStrings";
 import { CvLinkButton } from "./CvLinkButton";
 import { LocaleButton } from "./LocaleButton";
 import { DarkModeButton } from "./DarkModeButton";
+import { AriaOnly } from "./AriaOnly";
 
 type Props = {
     className?: string,
@@ -44,35 +45,59 @@ export function Summary(props: Props) {
                 </p>
             </section>
 
-            <hr className="my-8 mx-auto w-[90%]" />
+            <hr className="my-8 mx-auto w-[90%]" aria-hidden={true} />
 
-            <section className="flex flex-wrap justify-evenly">
-                <ProgressBar percentage={94}>
-                    React {<br />} Native
-                </ProgressBar>
+            <section aria-label={strings.a11y_skills}>
+                <ul className="flex flex-wrap justify-evenly">
+                    <li>
+                        <ProgressBar percentage={94}>
+                            <span>React Native</span>
+                            <AriaOnly>, {strings.a11y_very_advanced}</AriaOnly>
+                        </ProgressBar>
+                    </li>
 
-                <ProgressBar percentage={90}>
-                    React
-                </ProgressBar>
+                    <li>
+                        <ProgressBar percentage={90}>
+                            <span>React</span>
+                            <AriaOnly>, {strings.a11y_very_advanced}</AriaOnly>
+                        </ProgressBar>
+                    </li>
 
-                <ProgressBar percentage={80}>
-                    HTML {<br />} CSS
-                </ProgressBar>
+                    <li>
+                        <ProgressBar percentage={80}>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <AriaOnly>, {strings.a11y_advanced}</AriaOnly>
+                        </ProgressBar>
+                    </li>
 
-                <ProgressBar percentage={98}>
-                    Unity
-                </ProgressBar>
+                    <li>
+                        <ProgressBar percentage={98}>
+                            <span>Unity</span>
+                            <AriaOnly>, {strings.a11y_very_advanced}</AriaOnly>
+                        </ProgressBar>
+                    </li>
 
-                <ProgressBar percentage={90}>
-                    C# {<br />} .NET
-                </ProgressBar>
+                    <li>
+                        <ProgressBar percentage={90}>
+                            <span aria-hidden={true}>C#</span>
+                            <span aria-hidden={true}>.NET</span>
+                            <AriaOnly>c sharp</AriaOnly>
+                            <AriaOnly>dot net</AriaOnly>
+                            <AriaOnly>, {strings.a11y_very_advanced}</AriaOnly>
+                        </ProgressBar>
+                    </li>
 
-                <ProgressBar percentage={100}>
-                    Git
-                </ProgressBar>
+                    <li>
+                        <ProgressBar percentage={100}>
+                            <span>Git</span>
+                            <AriaOnly>, {strings.a11y_extremely_advanced}</AriaOnly>
+                        </ProgressBar>
+                    </li>
+                </ul>
             </section>
 
-            <hr className="my-8 mx-auto w-[90%]" />
+            <hr className="my-8 mx-auto w-[90%]" aria-hidden={true} />
 
             <footer className="flex flex-row justify-evenly items-center">
                 <CvLinkButton />
