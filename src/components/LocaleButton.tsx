@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import classNames from "classnames";
 import { useAtom } from "jotai";
 
@@ -8,6 +8,7 @@ import { AnimatedOpen } from "../utils/AnimatedOpen";
 import { fasterDefault } from "../spring/configs";
 import { useClickOutside } from "../utils/useClickOutside";
 import chevronImg from "../assets/chevron.svg";
+import { useStrings } from "../localization/useStrings";
 
 type Props = {
     className?: string,
@@ -17,6 +18,8 @@ export function LocaleButton(props: Props) {
     const [locale, setLocale] = useAtom(localeAtom);
     const [isOpen, setIsOpen] = useState(false);
     const ref = useClickOutside<HTMLDivElement>(() => setIsOpen(false));
+    const listId = useId();
+    const strings = useStrings();
 
     return (
         <div ref={ref} className={classNames(
@@ -34,8 +37,10 @@ export function LocaleButton(props: Props) {
                     "py-[.05rem] px-2",
                     "text-clickable",
                 )}
-                onMouseDown={() => setIsOpen(value => !value)}
-                onFocus={() => setIsOpen(true)}
+                onClick={() => setIsOpen(value => !value)}
+                aria-label={strings.a11y_change_language}
+                aria-expanded={isOpen}
+                aria-controls={listId}
             >
                 {locale}
                 <img
@@ -46,6 +51,7 @@ export function LocaleButton(props: Props) {
                         { "-rotate-90": isOpen },
                     )}
                     src={chevronImg}
+                    aria-hidden={false}
                 />
             </button>
             <AnimatedOpen
@@ -53,8 +59,12 @@ export function LocaleButton(props: Props) {
                 isOpen={isOpen}
                 springConfig={fasterDefault}
             >
-                <hr className="w-full" />
-                <ul className="flex flex-col items-center">
+                <hr className="w-full" aria-hidden={true} />
+                <ul
+                    className="flex flex-col items-center"
+                    aria-hidden={!isOpen}
+                    id={listId}
+                >
                     {locales.map(el => (
                         <li key={el}>
                             <button
@@ -63,6 +73,7 @@ export function LocaleButton(props: Props) {
                                     setLocale(el);
                                     setIsOpen(false);
                                 }}
+                                tabIndex={isOpen ? undefined : -1}
                             >
                                 {el}
                             </button>

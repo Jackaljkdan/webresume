@@ -35,7 +35,6 @@ export function AnimatedOpen(props: Props) {
             className={classNames(props.wrapperClassName)}
             style={spring}
             children={wrapper}
-            aria-expanded={!props.isOpen}
         />
     );
 }
