@@ -5,6 +5,7 @@ import { darkModeAtom } from "../utils/useDarkMode";
 import lightModeImg from "../assets/light_mode.svg";
 import darkModeImg from "../assets/dark_mode.svg";
 import { GroupHoverIcon } from "./GroupHoverIcon";
+import { useStrings } from "../localization/useStrings";
 
 type Props = {
     className?: string,
@@ -12,6 +13,7 @@ type Props = {
 
 export function DarkModeButton(props: Props) {
     const [darkMode, setDarkMode] = useAtom(darkModeAtom);
+    const strings = useStrings();
 
     return (
         <button
@@ -20,10 +22,12 @@ export function DarkModeButton(props: Props) {
                 props.className,
             )}
             onClick={() => setDarkMode(v => !v)}
+            aria-label={strings.a11y_darkmode}
+            aria-checked={darkMode}
+            role="switch"
         >
             <GroupHoverIcon
                 heightClassName="h-5"
-                alt={darkMode ? "light mode" : "dark mode"}
                 src={darkMode ? lightModeImg : darkModeImg}
             />
         </button >
