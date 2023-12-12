@@ -12,7 +12,7 @@ export function PromptIcon(props: Props) {
     const underscore = props.underscore ?? true;
     const rotate = props.rotate ?? false;
     return (
-        <span className={classNames(
+        <span aria-hidden={true} className={classNames(
             "mr-3 select-none",
             props.className,
         )}>
